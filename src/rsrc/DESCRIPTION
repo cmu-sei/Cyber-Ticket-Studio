@@ -1,0 +1,16 @@
+Package: rsrc
+Type: Package
+Title: Supporting functions for the app
+Version: 1.0
+Date: 2017-11-06
+Author: Who wrote it
+Maintainer: <ztkurtz@cert.org>
+Description: See parent project
+License: See parent project
+Imports:
+    igraph,
+    RSQLite,
+    utils,
+    yaml
+Depends:
+    data.table
