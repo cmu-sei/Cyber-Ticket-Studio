@@ -10,7 +10,6 @@
 # The shiny app loads only static .RDS files for efficiency.  To keep up-to-date,
 # it is occasionally necessary to rebuild these source files.  Simply source this
 # script to rebuild some or all of the source files.
-rm(list = ls()) #library(data.table)
 library(RSQLite)
 library(rsrc)
 
@@ -31,9 +30,6 @@ tickets = merge(tickets, ticket_clusters$clust_doc_map, by = 'ticket_id', all.x 
 print('Tabling summaries of the tickets clusters')
 ticket_clusters$summaries = rsrc::summarize_clusters(
     tickets, ticket_clusters, kind = 'ticket')
-# 
-# ticket_clusters$summaries = rsrc::summarize_ticket_clusters(
-#     tickets, ticket_clusters)
 
 ######################
 #### OBSERVABLES
