@@ -1,8 +1,6 @@
+# Notes
 
-# Workflow
+`build_backend.sh` is a shell script that prepares the data for visualization in CTS by executing both of the following scripts:
 
-build_db.py creates an sqlite3 database, inserts the tickets data as a table, and extracts observables from the tickets, creating a new observables table.
-
-similarities.py creates new tables of non-zero similarities between observables (based on co-membership in tickets) and between tickets (based on co-mentions of observables)
-
-process_data/* loads the database into R and creates static fiels that the app will use for fast retrieval
+- `_python_build_step_1.py` creates an sqlite3 database, inserts the tickets data as a table, extracts observables from the tickets to create a new observables table, and generates a sparse table of similarities among the observables.
+- `_R_build_step_2.R` caches numerous views of the sqlite database as R-ready binaries for fast retrieval in CTS.

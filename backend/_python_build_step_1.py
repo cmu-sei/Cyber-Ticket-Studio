@@ -14,7 +14,6 @@ Ending point:  a database that contains separate tables for tickets and their ex
 """
 from __future__ import print_function
 import pandas as pd
-import pdb
 
 from pysrc import config
 from pysrc import dbtools
